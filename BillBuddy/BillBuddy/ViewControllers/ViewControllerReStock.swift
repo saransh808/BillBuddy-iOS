@@ -10,7 +10,7 @@ import UIKit
 class ViewControllerReStock: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var localQuantity : Int = 0
-    var itemIndex : Int = 0
+    var itemIndex : Int = -1
     
     @IBOutlet weak var textNewStockValue: UITextField!
     
@@ -50,12 +50,27 @@ class ViewControllerReStock: UIViewController, UITableViewDataSource, UITableVie
         let op : String = ((sender as! UIButton).titleLabel?.text)!
         print(op)
         if(op == "ReStock"){
-            HeadManager.registerList[itemIndex].setItemQuantity(newQuantity: ((textNewStockValue.text?.description ?? "0") as NSString).integerValue)
-            reStockTable.reloadData()
+            
+            if(itemIndex < 0){
+                let alert = UIAlertController(title: "Alert", message: "Please select an item first!", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                textNewStockValue.text = "0"
+            }else if(((textNewStockValue.text?.description ?? "0") as NSString).integerValue <= HeadManager.registerList[itemIndex].getItemQuantity()){
+                
+                let alert = UIAlertController(title: "Alert", message: "New Quantity has to be more than old quantity", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                textNewStockValue.text = "0"
+            }else{
+                HeadManager.registerList[itemIndex].setItemQuantity(newQuantity: ((textNewStockValue.text?.description ?? "0") as NSString).integerValue)
+                reStockTable.reloadData()
+            }
+            itemIndex = -1
             
             //ViewController.billTable.reloadData()
         }else{
-            
+            navigationController?.popViewController(animated: true)
         }
     }
     
