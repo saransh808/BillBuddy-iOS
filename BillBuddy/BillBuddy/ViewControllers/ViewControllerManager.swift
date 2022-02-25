@@ -11,8 +11,14 @@ class ViewControllerManager: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        let backItem = UIBarButtonItem(title: "Custom")
+//        navigationItem.backBarButtonItem = backItem
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
     }
     
 

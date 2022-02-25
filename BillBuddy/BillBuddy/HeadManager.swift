@@ -12,4 +12,7 @@ class HeadManager{
     
     static var registerList : [CashRegister] = []
     
+    static var purchaseHistory : [PurchaseHistory] = []
+    
+    
 }

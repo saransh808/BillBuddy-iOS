@@ -34,7 +34,7 @@ class ViewControllerReStock: UIViewController, UITableViewDataSource, UITableVie
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "cellForReStock")
         
         cell.textLabel!.text = HeadManager.registerList[indexPath.row].getItemDetails()
-        cell.detailTextLabel?.text = "Quantity : " + HeadManager.registerList[indexPath.row].getItemQuantity().description
+        cell.detailTextLabel?.text = "Quantity Available : " + HeadManager.registerList[indexPath.row].getItemQuantity().description
         return cell
     }
     

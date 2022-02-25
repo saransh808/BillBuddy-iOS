@@ -57,12 +57,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             print("Local Price : \(localPrice)")
             print("Local Quantity : \((localQuantity as NSString).integerValue)")
             let total = localPrice * (localQuantity as NSString).integerValue
-            
-            HeadManager.registerList[itemIndex].updateQuantity(iQuantityTaken: (localQuantity as NSString).integerValue)
-            print(total)
-            
-            
-            
+            let quantityInStock :Int = HeadManager.registerList[itemIndex].getItemQuantity()
+            if(quantityInStock<((localQuantity as NSString).integerValue)){
+                let alert = UIAlertController(title: "Alert", message: "Can't buy more than stock quantity", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }else{
+                HeadManager.registerList[itemIndex].updateQuantity(iQuantityTaken: (localQuantity as NSString).integerValue)
+                print(total)
+                
+                HeadManager.purchaseHistory.append(PurchaseHistory(purchasedName: HeadManager.registerList[itemIndex].getItemName().description, totalPurchasedPrice: total, purchasedQuantity: (localQuantity as NSString).integerValue))
+            }
             self.billTable.reloadData()
             self.labelTotal.text = "$"+String(total)+""
             self.labelQuantity.text = "Quantity : 0"

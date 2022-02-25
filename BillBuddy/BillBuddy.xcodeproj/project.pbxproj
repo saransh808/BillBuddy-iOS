@@ -18,6 +18,8 @@
 		3C31488A27C71AE2006986FF /* ViewControllerHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C31488927C71AE2006986FF /* ViewControllerHistory.swift */; };
 		3C31488C27C71C17006986FF /* ViewControllerReStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C31488B27C71C17006986FF /* ViewControllerReStock.swift */; };
 		3C31488E27C721C0006986FF /* HeadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C31488D27C721C0006986FF /* HeadManager.swift */; };
+		3C31489027C942B7006986FF /* ViewControllerItemHistoryDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C31488F27C942B7006986FF /* ViewControllerItemHistoryDetails.swift */; };
+		3C31489227C946FB006986FF /* PurchaseHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C31489127C946FB006986FF /* PurchaseHistory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		3C31488927C71AE2006986FF /* ViewControllerHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHistory.swift; sourceTree = "<group>"; };
 		3C31488B27C71C17006986FF /* ViewControllerReStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerReStock.swift; sourceTree = "<group>"; };
 		3C31488D27C721C0006986FF /* HeadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadManager.swift; sourceTree = "<group>"; };
+		3C31488F27C942B7006986FF /* ViewControllerItemHistoryDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerItemHistoryDetails.swift; sourceTree = "<group>"; };
+		3C31489127C946FB006986FF /* PurchaseHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseHistory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 				3C31487E27C6AFCE006986FF /* Info.plist */,
 				3C31488427C6BD83006986FF /* CashRegister.swift */,
 				3C31488D27C721C0006986FF /* HeadManager.swift */,
+				3C31489127C946FB006986FF /* PurchaseHistory.swift */,
 			);
 			path = BillBuddy;
 			sourceTree = "<group>";
@@ -86,6 +91,7 @@
 				3C31488627C717DC006986FF /* ViewControllerManager.swift */,
 				3C31488927C71AE2006986FF /* ViewControllerHistory.swift */,
 				3C31488B27C71C17006986FF /* ViewControllerReStock.swift */,
+				3C31488F27C942B7006986FF /* ViewControllerItemHistoryDetails.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -164,10 +170,12 @@
 				3C31488727C717DC006986FF /* ViewControllerManager.swift in Sources */,
 				3C31488E27C721C0006986FF /* HeadManager.swift in Sources */,
 				3C31488A27C71AE2006986FF /* ViewControllerHistory.swift in Sources */,
+				3C31489227C946FB006986FF /* PurchaseHistory.swift in Sources */,
 				3C31487527C6AFCB006986FF /* ViewController.swift in Sources */,
 				3C31488527C6BD83006986FF /* CashRegister.swift in Sources */,
 				3C31488C27C71C17006986FF /* ViewControllerReStock.swift in Sources */,
 				3C31487127C6AFCB006986FF /* AppDelegate.swift in Sources */,
+				3C31489027C942B7006986FF /* ViewControllerItemHistoryDetails.swift in Sources */,
 				3C31487327C6AFCB006986FF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
