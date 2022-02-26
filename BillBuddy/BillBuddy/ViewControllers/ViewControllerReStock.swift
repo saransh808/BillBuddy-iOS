@@ -24,13 +24,7 @@ class ViewControllerReStock: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cellForReStock", for: indexPath)
-//        cell.textLabel!.text = HeadManager.registerList[indexPath.row].getItemDetails()
-//        cell.detailTextLabel?.text = "Sammmm"
-//        return cell
-        
-        
-        
+
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "cellForReStock")
         
         cell.textLabel!.text = HeadManager.registerList[indexPath.row].getItemDetails()
@@ -82,14 +76,5 @@ class ViewControllerReStock: UIViewController, UITableViewDataSource, UITableVie
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

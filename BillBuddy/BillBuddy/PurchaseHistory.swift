@@ -23,7 +23,6 @@ class PurchaseHistory{
         
         
         
-//        self.itemPurchaseDate = Date()
         
         let currDate = Date()
         let format = DateFormatter()

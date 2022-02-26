@@ -81,12 +81,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
-    
-    
-    
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 1
-//    }
+
     
     func printAllItems(){
         for currItem in HeadManager.registerList{
@@ -100,8 +95,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath)
-//
+
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "itemCell")
         
         cell.textLabel!.text = HeadManager.registerList[indexPath.row].getItemDetails()
